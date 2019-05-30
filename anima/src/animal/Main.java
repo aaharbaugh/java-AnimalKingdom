@@ -93,5 +93,11 @@ public class Main
         yearList = sortAnimal(fullList, v -> (v.getYear() == 1758));
         yearList.sort((v1, v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
         System.out.println(yearList.toString());
+
+        System.out.println("\n\n*** Alphabetical Order of Mammals***");
+        ArrayList<AbstractAnimal> typeList = new ArrayList<AbstractAnimal>();
+        typeList = sortAnimal(fullList, v -> (v instanceof Mammal));
+        typeList.sort((v1, v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
+        System.out.println(typeList.toString());
     }
 }
