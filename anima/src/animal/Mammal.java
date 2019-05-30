@@ -2,7 +2,6 @@ package animal;
 
 public class Mammal extends AbstractAnimal
 {
-    public String name;
 
     public Mammal(String name, int year, int food)
     {
@@ -33,5 +32,11 @@ public class Mammal extends AbstractAnimal
     public String getReproduce()
     {
         return "live birth";
+    }
+
+    @Override
+    public String toString()
+    {
+        return "\n[Mammel | " + getName() + " | " + year + " |  " + getMove() + " | " + getBreath() + "| " + getReproduce() + "]";
     }
 }

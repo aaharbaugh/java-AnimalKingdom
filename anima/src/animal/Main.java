@@ -4,6 +4,31 @@ import java.util.*;
 
 public class Main
 {
+    public static void printAnimal(ArrayList<AbstractAnimal> animals, CheckAnimal tester)
+    { 
+        for (AbstractAnimal a : animals)
+        {
+            if(tester.test(a))
+            {
+                System.out.print(a.toString());
+            }
+        }
+    }
+
+    public static ArrayList<AbstractAnimal> sortAnimal(ArrayList<AbstractAnimal> animals, CheckAnimal tester)
+    { 
+        ArrayList<AbstractAnimal> sortedList = new ArrayList<AbstractAnimal>();
+
+        for (AbstractAnimal a : animals)
+        {
+            if(tester.test(a))
+            {
+                sortedList.add(a);
+            }
+        }
+
+        return sortedList;
+    }
 
     public static void main(String[] args)
     {
@@ -41,6 +66,32 @@ public class Main
         fullList.add(salmon);
         fullList.add(catfish);
         fullList.add(perch);
-        fullList.add(panda);
+
+        System.out.println("\n*** The Full List ***\n");
+        System.out.println(fullList.toString());
+
+        System.out.println("\n*** Descending Order of Year Named ***\n");
+        fullList.sort((v1, v2) -> v2.getYear() - v1.getYear());
+        System.out.println(fullList.toString());
+
+        System.out.println("\n*** Alphabetical Order by Name ***\n");
+        fullList.sort((v1, v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
+        System.out.println(fullList.toString());
+
+        System.out.println("\n*** Lung Breathing Animals ***");
+        printAnimal(fullList, v -> (v.getBreath().equals("lungs")));
+
+        System.out.println("\n\n*** Lung Breathing Animals Born in 1758 ***");
+        printAnimal(fullList, v -> (v.getBreath().equals("lungs")) && (v.getYear() == 1758));
+
+        System.out.println("\n\n*** Lung Breathing Animals Born That Lay Eggs ***");
+        printAnimal(fullList, v -> (v.getReproduce().equals("eggs")) && (v.getBreath().equals("lungs")));
+        
+        
+        System.out.println("\n\n*** Alphabetical Order of Animals Born in 1758  ***");
+        ArrayList<AbstractAnimal> yearList = new ArrayList<AbstractAnimal>();
+        yearList = sortAnimal(fullList, v -> (v.getYear() == 1758));
+        yearList.sort((v1, v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
+        System.out.println(yearList.toString());
     }
 }

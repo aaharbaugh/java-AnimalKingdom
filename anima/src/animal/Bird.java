@@ -2,11 +2,12 @@ package animal;
 
 public class Bird extends AbstractAnimal
 {
-    public String name;
 
-    public Bird(String name)
+    public Bird(String name, int year, int food)
     {
         this.name = name;
+        this.year = year;
+        this.food = food;
     }
 
     @Override
@@ -31,5 +32,11 @@ public class Bird extends AbstractAnimal
     public String getReproduce()
     {
         return "eggs";
+    }
+
+    @Override
+    public String toString()
+    {
+        return "\n[Bird | " + getName() + " | " + year + " |  " + getMove() + " | " + getBreath() + "| " + getReproduce() + "]";
     }
 }
