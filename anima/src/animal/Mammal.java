@@ -4,32 +4,33 @@ public class Mammal extends AbstractAnimal
 {
     public String name;
 
-    public Mammal(String name, int food)
+    public Mammal(String name, int year, int food)
     {
-        super(food);
         this.name = name;
+        this.year = year;
+        this.food = food;
     }
 
     @Override
-    public void String getName()
+    public String getName()
     {
         return name;
     }
 
     @Override
-    public void String getMove()
+    public String getMove()
     {
         return "walk";
     }
 
     @Override
-    public void String getBreath()
+    public String getBreath()
     {
         return "lungs";
     }
 
     @Override
-    public void String getReproduce()
+    public String getReproduce()
     {
         return "live birth";
     }

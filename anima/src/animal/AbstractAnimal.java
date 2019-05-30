@@ -18,7 +18,7 @@ public abstract class AbstractAnimal
         this.food = food;
     }
 
-    public AbstractVehicle()
+    public AbstractAnimal()
     {
         food = 1;
     }

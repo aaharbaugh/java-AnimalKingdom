@@ -4,9 +4,8 @@ public class Fish extends AbstractAnimal
 {
     public String name;
 
-    public Fish(String name, int food)
+    public Fish(String name)
     {
-        super(food);
         this.name = name;
     }
 

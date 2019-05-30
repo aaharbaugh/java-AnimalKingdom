@@ -4,9 +4,8 @@ public class Bird extends AbstractAnimal
 {
     public String name;
 
-    public Bird(String name, int food)
+    public Bird(String name)
     {
-        super(food);
         this.name = name;
     }
 

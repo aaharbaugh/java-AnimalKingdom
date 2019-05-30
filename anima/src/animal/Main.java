@@ -14,5 +14,33 @@ public class Main
         Mammal armadillo = new Mammal("Armadillo", 1758, 2);
         Mammal raccoon = new Mammal("Raccoon", 1758, 2);
         Mammal bigfoot = new Mammal("Bigfoot", 2021, 2);
+
+        Bird pigeon = new Bird("Pigeon", 1837, 2);
+        Bird peacock = new Bird("Peacock", 1821, 2);
+        Bird toucan = new Bird("Toucan", 1758, 2);
+        Bird parrot = new Bird("Parrot", 1824, 2);
+        Bird swan = new Bird("Swan", 1758, 2);
+
+        Fish salmon = new Fish("Salmon", 1758, 1);
+        Fish catfish = new Fish("Catfish", 1758, 1);
+        Fish perch = new Fish("Perch", 1758, 1);
+
+        ArrayList<AbstractAnimal> fullList = new ArrayList<AbstractAnimal>();
+        fullList.add(panda);
+        fullList.add(zebra);
+        fullList.add(koala);
+        fullList.add(sloth);
+        fullList.add(armadillo);
+        fullList.add(raccoon);
+        fullList.add(bigfoot);
+        fullList.add(pigeon);
+        fullList.add(peacock);
+        fullList.add(toucan);
+        fullList.add(parrot);
+        fullList.add(swan);
+        fullList.add(salmon);
+        fullList.add(catfish);
+        fullList.add(perch);
+        fullList.add(panda);
     }
 }
